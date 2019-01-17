@@ -1,4 +1,4 @@
-# ConvertEpochToDate
+# Convert Epoch To Date
 Sublime Text 3 plugin to convert Epoch timestamps to Date
 
 This plugin converts Epoch timestamps to human readable date. It works on the selection or the word under cursor. The replacement is done inline & can be undone using ctrl+z (undo) command.
