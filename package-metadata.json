@@ -1,1 +1,0 @@
-{"platforms": ["*"], "description": "A Sublime Text package for convert Epoch timestamps to human readable Date", "sublime_text": "*", "url": "https://github.com/nexional/ConvertEpochToDate", "dependencies": [], "version": "0.1.0"}
