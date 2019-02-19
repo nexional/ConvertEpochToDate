@@ -15,7 +15,7 @@ class ConvertEpochToDateCommand(sublime_plugin.TextCommand):
                 milsec = str(epoch_text)[10:13]
                 if milsec:
                     milsec = format(int(float('0.' + milsec) * 1000), '03d')
-                result = datetime.fromtimestamp(int(str(epoch_text)[0:10])).strftime("%m/%d/%y %H:%M:%S") + ('.' + str(milsec) if milsec else '')
+                result = datetime.fromtimestamp(int(str(epoch_text)[0:10])).strftime("%a %d %b %Y %H:%M:%S") + ('.' + str(milsec) if milsec else '')
 
                 if result:
                     self.view.replace(edit, region, result)
