@@ -1,12 +1,12 @@
 # Convert Epoch To Date
 Sublime Text plugin to convert [Epoch timestamps](https://www.wikiwand.com/en/Unix_time) to human date. Works with Sublime Text v2.x or v3.x
 
-This plugin converts Epoch timestamp to human date timestamp. It works on the selection or the word under caret (not mouse pointer). The replacement is done inline & can be undone using Undo (ctrl+z) command. Output date message is also shown in Status bar.
+This plugin converts Epoch timestamp to human date timestamp in your local time zone. It works on the selection or the word under caret (not mouse pointer). The replacement is done inline & can be undone using Undo (ctrl+z) command. Output date message is also shown in Status bar.
 
 If the view/file is readonly or inline replacement can't be made then only the status bar message is shown.
 
-10-13 digits are expected as Epoch timestamp. Anything else is ignored. Output Date has the format `%a %d %b %Y %H:%M:%S.ms` e.g.
-`Tue 01 Jan 2019 01:02:34.786`.
+10-13 digits are expected as Epoch timestamp. Anything else is ignored. Output Date has the format `%a %d %b %Y %I:%M:%S.ms %p` e.g.
+`Tue 01 Jan 2019 01:02:34.786 AM`.
 
 There are 3 ways you can invoke the command:
 

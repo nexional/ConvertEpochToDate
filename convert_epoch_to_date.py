@@ -13,14 +13,16 @@ class ConvertEpochToDateCommand(sublime_plugin.TextCommand):
 
             epoch_text = view.substr(region)
             if epoch_text and re.match(r'^(\d{10,13})$', epoch_text):
-                milsec = str(epoch_text)[10:13]
-                if milsec:
-                    milsec = format(int(float('0.' + milsec) * 1000), '03d')
-                result = datetime.fromtimestamp(int(str(epoch_text)[0:10])).strftime("%a %d %b %Y %H:%M:%S") + ('.' + str(milsec) if milsec else '')
+                result = datetime.fromtimestamp(int(str(epoch_text)[0:10])).strftime("%a %d %b %Y %I:%M:%S %p")
 
                 if result:
+                    milsec = str(epoch_text)[10:13]
+                    if milsec:
+                        milsec = format(int(float('0.' + milsec) * 1000), '03d')
+                        result = re.sub(r' [AP]M$', ('.' + str(milsec) if milsec else '') + '\g<0>', result)
+
                     if view.is_read_only():
-                        sublime.status_message('ConvertEpochToDate: ' + result + ' (Warning: View readonly. can\'t make inline replacement)')
+                        sublime.status_message('ConvertEpochToDate: ' + result + ' (Warning: View readonly. Can\'t make inline replacement)')
                     else:
                         view.replace(edit, region, result)
                         sublime.status_message('ConvertEpochToDate: ' + result)
