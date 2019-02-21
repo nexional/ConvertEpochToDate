@@ -19,7 +19,7 @@ class ConvertEpochToDateCommand(sublime_plugin.TextCommand):
                     milsec = str(epoch_text)[10:13]
                     if milsec:
                         milsec = format(int(float('0.' + milsec) * 1000), '03d')
-                        result = re.sub(r' [AP]M$', ('.' + str(milsec) if milsec else '') + '\g<0>', result)
+                        result = re.sub(r' [AP]M$', '.' + str(milsec) + '\g<0>', result)
 
                     if view.is_read_only():
                         sublime.status_message('ConvertEpochToDate: ' + result + ' (Warning: View readonly. Can\'t make inline replacement)')
