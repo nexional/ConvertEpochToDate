@@ -8,10 +8,11 @@ If the view/file is readonly or inline replacement can't be made then only the s
 10-13 digits are expected as Epoch timestamp. Anything else is ignored. Output Date has the format `%a %d %b %Y %I:%M:%S.ms %p` e.g.
 `Tue 01 Jan 2019 01:02:34.786 AM`.
 
-There are 3 ways you can invoke the command:
+There are 4 ways you can invoke the command:
 
-* "Tools" Menu > "Convert Epoch to Date"
+* Tools > "Convert Epoch to Date"
 * Context menu (Right click) > "Convert Epoch to Date"
+* Command Palette (_Ctrl + Shift + P_ on Windows or _Cmd + Shift + P_ on Mac) > Input "Convert Epoch To Date"
 * Use following keyboard shortcuts:
     * `ctrl+alt+,`  (Windows)
     * `super+alt+,` (macOS/OSX)
@@ -33,4 +34,5 @@ GNU General Public License v3.0. [More details](https://github.com/nexional/Conv
 
 ## Links
 
-PackageControl: [ConvertEpochToDate](https://packagecontrol.io/packages/ConvertEpochToDate)
+* PackageControl: [ConvertEpochToDate](https://packagecontrol.io/packages/ConvertEpochToDate)
+* GitHub: [ConvertEpochToDate](https://github.com/nexional/ConvertEpochToDate)
