@@ -15,8 +15,8 @@ If the view/file is readonly or in-place replacement can't be made then only the
 
 10-13 digits are expected as Epoch timestamp. Anything else is ignored.
 
-Default output date format is `%a %d %b %Y %I:%M:%S %p + XXX ms` e.g.
-`Tue 01 Jan 2019 01:02:34 AM + 123 ms`. It can be customized to the format you want. See **Customization** section below.
+Default output date format is `%a %d %b %Y %I:%M:%S %p + XXXms` e.g.
+`Tue 01 Jan 2019 01:02:34 AM + 123ms`. It can be customized to the format you want. See **Customization** section below.
 
 ## How to use
 
