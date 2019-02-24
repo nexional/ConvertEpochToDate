@@ -1,12 +1,24 @@
 # Convert Epoch To Date
-Sublime Text plugin to convert [Epoch timestamps](https://www.wikiwand.com/en/Unix_time) to human date. Works with Sublime Text v2.x or v3.x
 
-This plugin converts Epoch timestamp to human date timestamp in your local time zone. It works on the selection or the word under caret (not mouse pointer). The replacement is done inline & can be undone using Undo (ctrl+z) command. Output date message is also shown in Status bar.
+## Installation
 
-If the view/file is readonly or inline replacement can't be made then only the status bar message is shown.
+* Install [Sublime Text Package Control](https://packagecontrol.io). Ignore if installed already
+* Tools > Command Palette > Input/select `Package Control: Install Package`
+* Enter `ConvertEpochToDate`
 
-10-13 digits are expected as Epoch timestamp. Anything else is ignored. Output Date has the format `%a %d %b %Y %I:%M:%S.ms %p` e.g.
-`Tue 01 Jan 2019 01:02:34.786 AM`.
+## Documentation
+Sublime Text package to convert [Epoch timestamps](https://www.wikiwand.com/en/Unix_time) to human date. Works with Sublime Text v2.x or v3.x
+
+This package converts Epoch timestamp to human date in your local time zone. It works on the selection or the word under caret (not mouse pointer). The replacement is done in-place & can be undone using Undo (ctrl+z) command. Output date message is also shown in Status bar.
+
+If the view/file is readonly or in-place replacement can't be made then only the status bar message is shown.
+
+10-13 digits are expected as Epoch timestamp. Anything else is ignored.
+
+Default output date format is `%a %d %b %Y %I:%M:%S %p + XXX ms` e.g.
+`Tue 01 Jan 2019 01:02:34 AM + 123 ms`. It can be customized to the format you want. See **Customization** section below.
+
+## How to use
 
 There are 4 ways you can invoke the command:
 
@@ -18,15 +30,31 @@ There are 4 ways you can invoke the command:
     * `super+alt+,` (macOS/OSX)
     * `ctrl+alt+,`  (Linux)
 
-You can also override the default binding in your User Keybinding file e.g.
+You can also override the default binding in your User Key Binding file e.g.
 
 `    { "keys": ["ctrl+alt+t"], "command": "convert_epoch_to_date" }`
 
-## Installation
+## Customization
+Following parameters can be overridden in User Settings file (_Preferences > Package Settings > ConvertEpochToDate > Settings - User_)
 
-* Install the [Sublime Text Package Control](https://packagecontrol.io) plugin. Ignore if installed already
-* Tools > Command Palette > Input/select `Package Control: Install Package`
-* Enter `ConvertEpochToDate`
+```
+{
+    // in-place replacement to date
+    "in_place_replacement": true,
+
+    // defines custom output date format. visit http://strftime.org for possible format directives
+    "output_date_format": "%a %d %b %Y %I:%M:%S %p",
+
+    // if set to true, appends milliseconds at the end of output date
+    "show_milliseconds": true,
+
+    // shows message box for output date
+    "show_message_box": false,
+
+    // shows message box only for readonly views. not used if show_message_box set to true
+    "show_message_box_only_for_readonly": true
+}
+```
 
 ## License
 
@@ -34,5 +62,7 @@ GNU General Public License v3.0. [More details](https://github.com/nexional/Conv
 
 ## Links
 
-* PackageControl: [ConvertEpochToDate](https://packagecontrol.io/packages/ConvertEpochToDate)
-* GitHub: [ConvertEpochToDate](https://github.com/nexional/ConvertEpochToDate)
+* ConvertEpochToDate on [PackageControl](https://packagecontrol.io/packages/ConvertEpochToDate)
+* ConvertEpochToDate on [GitHub](https://github.com/nexional/ConvertEpochToDate)
+* [Epoch timestamp](https://www.wikiwand.com/en/Unix_time)
+* [Date format directives](http://strftime.org)

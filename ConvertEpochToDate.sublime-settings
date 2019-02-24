@@ -1,13 +1,16 @@
 {
-	// defines custom output date format. visit http://strftime.org for possible format directives
-	"output_date_format": "%a %d %b %Y %I:%M:%S %p",
+    // in-place replacement to date
+    "in_place_replacement": true,
 
-    // if set to true appends milliseconds at the end of output date
+    // defines custom output date format. visit http://strftime.org for possible format directives
+    "output_date_format": "%a %d %b %Y %I:%M:%S %p",
+
+    // if set to true, appends milliseconds at the end of output date
     "show_milliseconds": true,
 
-    // disables inline replacement completely
-    "disable_inline_replacement": false,
+    // shows message box for output date
+    "show_message_box": false,
 
-    // shows dialog box output date message box
-    "enable_diaglog_box": false
+    // shows message box only for readonly views. not used if show_message_box set to true
+    "show_message_box_only_for_readonly": true
 }
