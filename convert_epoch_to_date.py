@@ -25,8 +25,7 @@ class ConvertEpochToDateCommand(sublime_plugin.TextCommand):
                     result = datetime.fromtimestamp(int(epoch_text[0:10])).strftime(output_date_format)
 
                 if result:
-                    show_ms = getSettings('show_milliseconds')
-                    if show_ms:
+                    if getSettings('show_milliseconds'):
                         milsec = epoch_text[10:13]
                         if not milsec:
                             milsec = '0'
