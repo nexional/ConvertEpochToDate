@@ -5,7 +5,7 @@
     // defines custom output date format. visit http://strftime.org for possible format directives
     "output_date_format": "%a %d %b %Y %I:%M:%S %p",
 
-    // if set to true, appends milliseconds at the end of output date
+    // appends milliseconds at the end of output date
     "show_milliseconds": true,
 
     // shows message box for output date
