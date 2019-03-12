@@ -5,7 +5,6 @@
      "id": "tools",
      "children":
         [
-            { "caption": "-", "id": "convert_epoch_to_date" },
             { "command": "convert_epoch_to_date", "caption": "Convert Epoch to Date"}
         ]
     },
