@@ -41,7 +41,7 @@ You can also override the default binding in your User Key Binding file e.g.
 
 Following parameters can be overridden in User Settings file (_Preferences > Package Settings > ConvertEpochToDate > Settings - User_) to the value desired:
 
-```jsonc
+```json
 {
     // in-place replacement to date
     "in_place_replacement": true,
