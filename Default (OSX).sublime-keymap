@@ -1,6 +1,8 @@
 [
-  {
-    "keys": ["super+alt+,"],
-    "command": "convert_epoch_to_date"
-  }
+    {
+        "keys": [
+            "super+alt+,"
+        ],
+        "command": "convert_epoch_to_date"
+    }
 ]

@@ -46,7 +46,7 @@ Following parameters can be overridden in User Settings file (_Preferences > Pac
     // in-place replacement to date
     "in_place_replacement": true,
 
-    // defines custom output date format. visit http://strftime.org for possible format directives
+    // defines custom output date format. visit strftime.org for possible format directives
     "output_date_format": "%a %d %b %Y %I:%M:%S %p",
 
     // if set to true, appends milliseconds at the end of output date
