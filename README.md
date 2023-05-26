@@ -6,7 +6,7 @@ This plugin converts Epoch timestamp to human date timestamp. It works on the se
 10-13 digits are expected as Epoch timestamp. Anything else is ignored. Output Date has the format `%m/%d/%y %H:%M:%S.ms` e.g.
 `01/02/19 14:00:30.786`.
 
-There are 3 ways you can invoke the command -
+There are 3 ways you can invoke the command:
 
 * Edit Menu > "Convert Epoch to Date"
 * Right click Context menu on selection/word & choose "Convert Epoch to Date"
@@ -14,7 +14,7 @@ There are 3 ways you can invoke the command -
   * `ctrl+alt+,` (Windows)
   * `super+alt+,` (OSX)
   * `ctrl+alt+,` (Linux)
-  
+
 You can also override the default binding in your User Keybinding file e.g.
 
 `    { "keys": ["ctrl+alt+t"], "command": "convert_epoch_to_date" }`
