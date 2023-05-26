@@ -52,7 +52,7 @@ Following parameters can be overridden in User Settings file (_Preferences > Pac
     "show_message_box": false,
 
     // shows message box only for readonly views. not used if show_message_box set to true
-    "show_message_box_only_for_readonly": true
+    "show_message_box_for_readonly": true
 }
 ```
 
