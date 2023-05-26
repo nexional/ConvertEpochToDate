@@ -9,7 +9,7 @@ This plugin converts Epoch timestamps to human readable date. It works on the se
 There are 3 ways you can invoke the command -
 
 * Edit Menu > "Convert Epoch to Date"
-* Context menu on selection/word & choose "Convert Epoch to Date"
+* Right click Context menu on selection/word & choose "Convert Epoch to Date"
 * Use following keyboard shortcuts:
   * `ctrl+alt+,` (Windows)
   * `super+alt+,` (OSX)
