@@ -29,8 +29,7 @@ class ConvertEpochToDateCommand(sublime_plugin.TextCommand):
                         milsec = epoch_text[10:13]
                         if not milsec:
                             milsec = '0'
-                        milsec = milsec.ljust(3, '0')
-                        result = result + ' + ' + milsec + 'ms'
+                        result = result + ' + ' + milsec.ljust(3, '0') + 'ms'
 
                     if view.is_read_only():
                         if not getSettings('show_message_box') and getSettings('show_message_box_for_readonly'):
