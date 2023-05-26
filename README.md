@@ -8,12 +8,12 @@ This plugin converts Epoch timestamp to human date timestamp. It works on the se
 
 There are 3 ways you can invoke the command:
 
-* Edit Menu > "Convert Epoch to Date"
+* "Tools" Menu > "Convert Epoch to Date"
 * Right click Context menu on selection/word & choose "Convert Epoch to Date"
 * Use following keyboard shortcuts:
-  * `ctrl+alt+,` (Windows)
-  * `super+alt+,` (OSX)
-  * `ctrl+alt+,` (Linux)
+  * `ctrl+alt+,`  (Windows)
+  * `super+alt+,` (macOS/OSX)
+  * `ctrl+alt+,`  (Linux)
 
 You can also override the default binding in your User Keybinding file e.g.
 
