@@ -1,0 +1,13 @@
+{
+	// defines custom output date format. visit http://strftime.org for possible format directives
+	"output_date_format": "%a %d %b %Y %I:%M:%S %p",
+
+    // if set to true appends milliseconds at the end of output date
+    "show_milliseconds": true,
+
+    // disables inline replacement completely
+    "disable_inline_replacement": false,
+
+    // shows dialog box output date message box
+    "enable_diaglog_box": false
+}
