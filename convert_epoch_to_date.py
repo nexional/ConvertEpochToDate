@@ -6,11 +6,12 @@ from datetime import datetime
 
 class ConvertEpochToDateCommand(sublime_plugin.TextCommand):
     def run(self, edit):
-        for region in self.view.sel():
+        view = self.view
+        for region in view.sel():
             if region.empty():
-                region = self.view.word(region)
+                region = view.word(region)
 
-            epoch_text = self.view.substr(region)
+            epoch_text = view.substr(region)
             if epoch_text and re.match(r'^(\d{10,13})$', epoch_text):
                 milsec = str(epoch_text)[10:13]
                 if milsec:
@@ -18,8 +19,12 @@ class ConvertEpochToDateCommand(sublime_plugin.TextCommand):
                 result = datetime.fromtimestamp(int(str(epoch_text)[0:10])).strftime("%a %d %b %Y %H:%M:%S") + ('.' + str(milsec) if milsec else '')
 
                 if result:
-                    self.view.replace(edit, region, result)
-
-                sublime.status_message('Converted: \'' + epoch_text + '\' --> \'' + result + '\'')
+                    if view.is_read_only():
+                        sublime.status_message('ConvertEpochToDate: ' + result + ' (Warning: View readonly. can\'t make inline replacement)')
+                    else:
+                        view.replace(edit, region, result)
+                        sublime.status_message('ConvertEpochToDate: ' + result)
+                else:
+                    sublime.status_message('ConvertEpochToDate: Conversion error')
             else:
-                sublime.status_message('Not a valid epoch time: \'' + epoch_text + '\'')
+                sublime.status_message('ConvertEpochToDate: Invalid epoch timestamp: \'' + epoch_text + '\'. Must be 10-13 digits')
