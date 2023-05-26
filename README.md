@@ -9,14 +9,16 @@
 ## Documentation
 Sublime Text package to convert [Epoch timestamps](https://www.wikiwand.com/en/Unix_time) to human date. Works with Sublime Text v2.x or v3.x
 
-This package converts Epoch timestamp to human date in your local time zone. It works on the selection or the word under caret (not mouse pointer). The replacement is done in-place & can be undone using Undo (ctrl+z) command. Output date message is also shown in Status bar.
+This package converts Epoch timestamp to human date in your local time zone. It works on the selection or the word under caret (not mouse pointer). The replacement is done in-place & can be undone using Undo (ctrl+z) command. In-place replacement can be disabled if desired (refer **Customization** section below).
 
-If the view/file is readonly or in-place replacement can't be made then only the status bar message is shown.
+If the view/file is readonly or in-place replacement can't be made then only the status bar message is shown. A message box is displayed in this case which can be disabled.
 
 10-13 digits are expected as Epoch timestamp. Anything else is ignored.
 
 Default output date format is `%a %d %b %Y %I:%M:%S %p + XXXms` e.g.
-`Tue 01 Jan 2019 01:02:34 AM + 123ms`. It can be customized to the format you want. See **Customization** section below.
+`Tue 01 Jan 2019 01:02:34 AM + 123ms`. It can be customized to the format you want (refer **Customization** section below).
+
+Any output/messages/errors are always displayed in Status bar.
 
 ## How to use
 
@@ -35,7 +37,7 @@ You can also override the default binding in your User Key Binding file e.g.
 `    { "keys": ["ctrl+alt+t"], "command": "convert_epoch_to_date" }`
 
 ## Customization
-Following parameters can be overridden in User Settings file (_Preferences > Package Settings > ConvertEpochToDate > Settings - User_)
+Following parameters can be overridden in User Settings file (_Preferences > Package Settings > ConvertEpochToDate > Settings - User_) to the value desired:
 
 ```
 {
@@ -58,11 +60,14 @@ Following parameters can be overridden in User Settings file (_Preferences > Pac
 
 ## License
 
-GNU General Public License v3.0. [More details](https://github.com/nexional/ConvertEpochToDate/blob/master/LICENSE)
+[GNU General Public License v3.0](https://github.com/nexional/ConvertEpochToDate/blob/master/LICENSE)
+
+## Issues
+
+Please report any bugs/issues [here](https://github.com/nexional/ConvertEpochToDate/issues/new)
 
 ## Links
 
-* ConvertEpochToDate on [PackageControl](https://packagecontrol.io/packages/ConvertEpochToDate)
-* ConvertEpochToDate on [GitHub](https://github.com/nexional/ConvertEpochToDate)
+* ConvertEpochToDate on [GitHub](https://github.com/nexional/ConvertEpochToDate) and [PackageControl](https://packagecontrol.io/packages/ConvertEpochToDate)
 * [Epoch timestamp](https://www.wikiwand.com/en/Unix_time)
 * [Date format directives](http://strftime.org)
