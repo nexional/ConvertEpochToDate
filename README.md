@@ -8,7 +8,7 @@
 
 ## Documentation
 
-Sublime Text package to convert [Epoch timestamps](https://www.wikiwand.com/en/Unix_time) to human date. Works with Sublime Text v2.x or v3.x
+Sublime Text package to convert [Epoch timestamps](https://www.wikiwand.com/en/Unix_time) to human date.
 
 This package converts Epoch timestamp to human date in your local time zone. It works on the selection or the word under caret (not mouse pointer). The replacement is done in-place & can be undone using Undo (ctrl+z) command. In-place replacement can be disabled if desired (refer **Customization** section below).
 

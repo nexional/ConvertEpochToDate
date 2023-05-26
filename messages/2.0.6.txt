@@ -1,0 +1,55 @@
+------
+v2.0.6
+------
+
+* plugin upgraded to python 3.8
+* default & user settings side by side
+* README option alongside settings
+
+------
+v2.0.5
+------
+
+* minor aesthetic changes
+
+------
+v2.0.4
+------
+
+* formatting
+
+------
+v2.0.3
+------
+
+Fixed ConvertEpochToDate.sublime-commands
+See below for v2.0.0 features.
+
+------
+v2.0.0
+------
+
+Various user customization options added:
+    * output date format now can be customized
+    * you can disable in-place replacement
+    * show messages-box for output
+
+In order to configure these parameters open your User Settings file (Preferences > Package Settings > ConvertEpochToDate > Settings - User)
+and add the option you want to change with the desired value from following:
+
+{
+    // in-place replacement to date
+    "in_place_replacement": true,
+
+    // defines custom output date format. visit http://strftime.org for possible format directives
+    "output_date_format": "%a %d %b %Y %I:%M:%S %p",
+
+    // if set to true, appends milliseconds at the end of output date
+    "show_milliseconds": true,
+
+    // shows message box for output date
+    "show_message_box": false,
+
+    // shows message box only for readonly views. not used if show_message_box set to true
+    "show_message_box_for_readonly": true
+}

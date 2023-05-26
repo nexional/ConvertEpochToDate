@@ -24,18 +24,19 @@
                         "caption": "ConvertEpochToDate",
                         "children": [
                             {
-                                "command": "open_file",
+                                "caption": "Settings",
+                                "command": "edit_settings",
                                 "args": {
-                                    "file": "${packages}/ConvertEpochToDate/ConvertEpochToDate.sublime-settings"
+                                    "base_file": "${packages}/ConvertEpochToDate/ConvertEpochToDate.sublime-settings",
+                                    "default": "{\n$0\n}\n"
                                 },
-                                "caption": "Settings – Default"
                             },
                             {
+                                "caption": "README",
                                 "command": "open_file",
                                 "args": {
-                                    "file": "${packages}/User/ConvertEpochToDate.sublime-settings"
+                                    "file": "${packages}/ConvertEpochToDate/README.md"
                                 },
-                                "caption": "Settings – User"
                             }
                         ]
                     }
