@@ -1,6 +1,3 @@
-Convert Epoch To Date
-=====================
-
 -------------
 DOCUMENTATION
 -------------
@@ -9,7 +6,7 @@ Sublime Text package to convert Epoch timestamps to human date. Works with Subli
 
 This package converts Epoch timestamp to human date in your local time zone. It works on the selection or the word under caret (not mouse pointer). The replacement is done in-place & can be undone using Undo (ctrl+z) command. Output date message is also shown in Status bar.
 
-If the view/file is readonly or in-place replacement can't be made then only the status bar message is shown. A message box is displayed in this case which can be disabled.
+If the view/file is readonly or in-place replacement can not be made then only the status bar message is shown. A message box is displayed in this case which can be disabled.
 
 10-13 digits are expected as Epoch timestamp. Anything else is ignored.
 
