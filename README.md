@@ -7,6 +7,7 @@
 * Enter `ConvertEpochToDate`
 
 ## Documentation
+
 Sublime Text package to convert [Epoch timestamps](https://www.wikiwand.com/en/Unix_time) to human date. Works with Sublime Text v2.x or v3.x
 
 This package converts Epoch timestamp to human date in your local time zone. It works on the selection or the word under caret (not mouse pointer). The replacement is done in-place & can be undone using Undo (ctrl+z) command. In-place replacement can be disabled if desired (refer **Customization** section below).
@@ -28,18 +29,19 @@ There are 4 ways you can invoke the command:
 * Context menu (Right click) > "Convert Epoch to Date"
 * Command Palette (_Ctrl + Shift + P_ on Windows or _Cmd + Shift + P_ on Mac) > Input "Convert Epoch To Date"
 * Use following keyboard shortcuts:
-    * `ctrl+alt+,`  (Windows)
-    * `super+alt+,` (macOS/OSX)
-    * `ctrl+alt+,`  (Linux)
+  * `ctrl+alt+,`  (Windows)
+  * `super+alt+,` (macOS/OSX)
+  * `ctrl+alt+,`  (Linux)
 
 You can also override the default binding in your User Key Binding file e.g.
 
-`    { "keys": ["ctrl+alt+t"], "command": "convert_epoch_to_date" }`
+`{ "keys": ["ctrl+alt+t"], "command": "convert_epoch_to_date" }`
 
 ## Customization
+
 Following parameters can be overridden in User Settings file (_Preferences > Package Settings > ConvertEpochToDate > Settings - User_) to the value desired:
 
-```
+```json
 {
     // in-place replacement to date
     "in_place_replacement": true,
