@@ -20,7 +20,7 @@
                 "mnemonic": "P",
                 "children": [
                     {
-                        "caption": "Convert Epoch to Date",
+                        "caption": "ConvertEpochToDate",
                         "children": [
                             {
                                 "command": "open_file",

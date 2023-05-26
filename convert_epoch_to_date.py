@@ -34,9 +34,16 @@ class ConvertEpochToDateCommand(sublime_plugin.TextCommand):
                         result = result + ' + ' + milsec + 'ms'
 
                     if view.is_read_only():
-                        msg = ' (Warning: View readonly. Can\'t make inline replacement)'
+                        if not getSettings('show_message_box') and getSettings('show_message_box_only_for_readonly'):
+                            sublime.message_dialog(result)
+                        msg = ' (Warning: View readonly' + ( '' if not getSettings('in_place_replacement') else '. Can not make in-place replacement' ) + ')'
+                    elif not getSettings('in_place_replacement'):
+                        msg = ' (Warning: In-place replacement disabled)'
                     else:
                         view.replace(edit, region, result)
+
+                    if getSettings('show_message_box'):
+                        sublime.message_dialog(result)
 
                     msg = 'ConvertEpochToDate: ' + result + msg
                 else:
