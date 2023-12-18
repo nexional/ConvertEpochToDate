@@ -2,7 +2,11 @@
     // in-place replacement to date
     "in_place_replacement": true,
     // defines custom output date format. visit http://strftime.org for possible format directives
-    "output_date_format": "%a %d %b %Y %I:%M:%S %p",
+    "output_date_format": "%a %d %b %Y %I:%M:%S %Z %p",
+    // defines timezone to convert to. for a list of timezones visit https://en.wikipedia.org/wiki/List_of_tz_database_time_zones 
+    // if undefined or set to an invalid timezone, the system time is used. 
+    // e.g. "UTC", "America/Los_Angeles"
+    "timezone": "",
     // appends milliseconds at the end of output date
     "show_milliseconds": true,
     // shows message box for output date

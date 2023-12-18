@@ -47,7 +47,12 @@ Following parameters can be overridden in User Settings file (_Preferences > Pac
     "in_place_replacement": true,
 
     // defines custom output date format. visit strftime.org for possible format directives
-    "output_date_format": "%a %d %b %Y %I:%M:%S %p",
+    "output_date_format": "%a %d %b %Y %I:%M:%S %Z %p",
+
+    // defines timezone to convert to. for a list of timezones visit https://en.wikipedia.org/wiki/List_of_tz_database_time_zones 
+    // if undefined or set to an invalid timezone, the system time is used. 
+    // e.g. "UTC", "America/Los_Angeles"
+    "timezone": "",
 
     // if set to true, appends milliseconds at the end of output date
     "show_milliseconds": true,
